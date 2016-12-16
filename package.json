@@ -1,6 +1,6 @@
 {
     "name": "overtype",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "displayName": "Overtype",
     "description": "Provides insert/overtype mode.",
     "publisher": "adammaras",
