@@ -51,7 +51,7 @@ Without further ado...
 "overtype.paste": true
 ```
 
-> Shows an abbreviated overtype status (`INS`/`OVR`) in the status line.
+> When in overtype mode, uses overtype behavior when pasting text.
 
 ### Abbreviated indicators
 
@@ -61,7 +61,7 @@ Horizontal screen space at a premium? Have too many things in your status bar al
 "overtype.abbreviatedStatus": true
 ```
 
-> When in overtype mode, uses overtype behavior when pasting text.
+> Shows an abbreviated overtype status (`INS`/`OVR`) in the status line.
 
 ## Contributing
 
