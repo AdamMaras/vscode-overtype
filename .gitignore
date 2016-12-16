@@ -1,0 +1,64 @@
+# Visual Studio Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+
+# Node.js
+.eslintcache
+.grunt
+.lock-wscript
+.node_repl_history
+.npm
+.nyc_output
+.yarn-integrity
+*.log
+*.pid
+*.pid.lock
+*.seed
+*.tgz
+build/Release
+coverage
+jspm_packages
+lib-cov
+logs
+node_modules
+npm-debug.log*
+pids
+
+# Windows
+$RECYCLE.BIN/
+Desktop.ini
+ehthumbs_vista.db
+ehthumbs.db
+Thumbs.db
+
+# macOS
+._*
+.apdisk
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.com.apple.timemachine.donotpresent
+.DocumentRevisions-V100
+.fseventsd
+.LSOverride
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+*.DS_Store
+Network Trash Folder
+Temporary Items
+Icon
+
+# Linux
+.directory
+.nfs*
+.Trash-*
+*~
+
+# Project
+node_modules
+out

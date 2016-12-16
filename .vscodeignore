@@ -1,0 +1,7 @@
+**/*
+!images/icon.svg
+!out/**/*
+!CHANGELOG.md
+!LICENSE
+!package.json
+!README.md
