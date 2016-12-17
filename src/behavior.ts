@@ -2,11 +2,11 @@ import * as vscode from "vscode";
 
 export function overtypeBeforeType(editor: vscode.TextEditor, text: string) {
     // skip overtype behavior when enter is pressed
-    if (text == "\r" || text == "\n" || text == "\r\n") {
+    if (text === "\r" || text === "\n" || text === "\r\n") {
         return;
     }
 
-    editor.selections = editor.selections.map(selection => {
+    editor.selections = editor.selections.map((selection) => {
         const cursorPosition = selection.start;
         const lineEndPosition = editor.document.lineAt(cursorPosition).range.end;
 
@@ -22,7 +22,7 @@ export function overtypeBeforeType(editor: vscode.TextEditor, text: string) {
 }
 
 export function overtypeBeforePaste(editor: vscode.TextEditor, text: string, pasteOnNewLine: boolean) {
-    editor.selections = editor.selections.map(selection => {
+    editor.selections = editor.selections.map((selection) => {
         if (pasteOnNewLine) {
             // highlight and replace all the selected lines
 
@@ -44,8 +44,11 @@ export function overtypeBeforePaste(editor: vscode.TextEditor, text: string, pas
             const lineEndOffset = editor.document.offsetAt(editor.document.lineAt(selection.end).range.end);
             const lineEndLength = lineEndOffset - selectionStartOffset;
 
-            const hasNewLine = text.indexOf("\r") != -1 || text.indexOf("\n") != -1;
-            const newSelectionLength = Math.max(hasNewLine ? lineEndLength : Math.min(lineEndLength, text.length), selectionLength);
+            const hasNewLine = text.indexOf("\r") !== -1 || text.indexOf("\n") !== -1;
+            const newSelectionLength = Math.max(
+                hasNewLine ? lineEndLength : Math.min(lineEndLength, text.length),
+                selectionLength,
+            );
             const newSelectionEndPosition = editor.document.positionAt(selectionStartOffset + newSelectionLength);
 
             return new vscode.Selection(selection.start, newSelectionEndPosition);

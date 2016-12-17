@@ -6,7 +6,7 @@ const defaultMode = false;
 
 const state = {
     global: defaultMode,
-    perEditor: new WeakMap<vscode.TextEditor, boolean>()
+    perEditor: new WeakMap<vscode.TextEditor, boolean>(),
 };
 
 export function getMode(textEditor: vscode.TextEditor) {
@@ -18,7 +18,7 @@ export function getMode(textEditor: vscode.TextEditor) {
         state.perEditor.set(textEditor, defaultMode);
     }
 
-    return <boolean>state.perEditor.get(textEditor);
+    return <boolean> state.perEditor.get(textEditor);
 }
 
 export function toggleMode(textEditor: vscode.TextEditor) {
@@ -34,7 +34,7 @@ export function toggleMode(textEditor: vscode.TextEditor) {
 }
 
 export function resetModes(mode: boolean | null, perEditor: boolean) {
-    if (mode === null) mode = defaultMode;
+    if (mode === null) { mode = defaultMode; }
 
     if (perEditor) {
         // when switching from global to per-editor, reset the global mode to default

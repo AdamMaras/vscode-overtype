@@ -1,4 +1,4 @@
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 
 export const configuration = loadConfiguration();
 
@@ -11,6 +11,7 @@ function loadConfiguration() {
         paste: overtypeConfiguration.get<boolean>("paste"),
         perEditor: overtypeConfiguration.get<boolean>("perEditor"),
 
+        // tslint:disable-next-line:object-literal-sort-keys
         defaultCursorStyle: (() => {
             switch (editorConfiguration.get<string>("cursorStyle")) {
                 case "line": return vscode.TextEditorCursorStyle.Line;
@@ -18,7 +19,7 @@ function loadConfiguration() {
                 case "underline": return vscode.TextEditorCursorStyle.Underline;
                 default: return vscode.TextEditorCursorStyle.Line;
             }
-        })()
+        })(),
     };
 }
 

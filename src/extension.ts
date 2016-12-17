@@ -1,9 +1,9 @@
 import * as vscode from "vscode";
 
+import { overtypeBeforePaste, overtypeBeforeType } from "./behavior";
 import { configuration, reloadConfiguration } from "./configuration";
+import { getMode, resetModes, toggleMode } from "./mode";
 import { createStatusBarItem, destroyStatusBarItem, updateStatusBarItem } from "./statusBarItem";
-import { getMode, toggleMode, resetModes } from "./mode";
-import { overtypeBeforeType, overtypeBeforePaste } from "./behavior";
 
 // initialization //////////////////////////////////////////////////////////////
 
@@ -11,16 +11,16 @@ export function activate(context: vscode.ExtensionContext) {
     const statusBarItem = createStatusBarItem();
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('overtype.toggle', toggleCommand),
+        vscode.commands.registerCommand("overtype.toggle", toggleCommand),
 
-        vscode.commands.registerCommand('type', typeCommand),
-        vscode.commands.registerCommand('paste', pasteCommand),
+        vscode.commands.registerCommand("type", typeCommand),
+        vscode.commands.registerCommand("paste", pasteCommand),
 
         vscode.window.onDidChangeActiveTextEditor(activeTextEditorChanged),
 
         vscode.workspace.onDidChangeConfiguration(onDidChangeConfiguration),
 
-        statusBarItem
+        statusBarItem,
     );
 }
 
@@ -77,7 +77,7 @@ function onDidChangeConfiguration() {
 }
 
 function shouldPerformOvertype() {
-    if (!vscode.window.activeTextEditor) return false;
+    if (!vscode.window.activeTextEditor) { return false; }
 
     const editor = vscode.window.activeTextEditor;
     const mode = getMode(editor);
@@ -91,7 +91,7 @@ function typeCommand(args: { text: string }) {
         overtypeBeforeType(editor, args.text);
     }
 
-    return vscode.commands.executeCommand('default:type', args);
+    return vscode.commands.executeCommand("default:type", args);
 }
 
 function pasteCommand(args: { text: string, pasteOnNewLine: boolean }) {
@@ -100,5 +100,5 @@ function pasteCommand(args: { text: string, pasteOnNewLine: boolean }) {
         overtypeBeforePaste(editor, args.text, args.pasteOnNewLine);
     }
 
-    return vscode.commands.executeCommand('default:paste', args);
+    return vscode.commands.executeCommand("default:paste", args);
 }
