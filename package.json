@@ -79,6 +79,7 @@
         "postinstall": "node ./node_modules/vscode/bin/install"
     },
     "devDependencies": {
+        "tslint": "~4.1.0",
         "typescript": "^2.1.0",
         "vscode": "^1.0.0"
     }
