@@ -9,6 +9,7 @@ import { createStatusBarItem, destroyStatusBarItem, updateStatusBarItem } from "
 
 export function activate(context: vscode.ExtensionContext) {
     const statusBarItem = createStatusBarItem();
+    activeTextEditorChanged();
 
     context.subscriptions.push(
         vscode.commands.registerCommand("overtype.toggle", toggleCommand),
