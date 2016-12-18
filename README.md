@@ -18,6 +18,8 @@ The aptly named **overtype mode** allows one to type over and replace existing c
 
 To toggle overtype mode, press the `Insert` key. If you don't have an `Insert` key, you can press `Ctrl+Shift+I` (on Windows and Linux) or `Cmd+Shift+I` (on Mac). If you don't care for either of those keybindings, you can customize them in your Keyboard Shortcuts preferences&mdash;just set your own binding for the `overtype.toggle` command.
 
+![Basic demo](images/demo-basic.gif)
+
 ### Global or per-editor
 
 It's bad enough that you have to keep track of that damn overtype indicator at the bottom of the window... but you want to have a separate overtype setting for *each editor?*
