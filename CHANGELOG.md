@@ -2,6 +2,11 @@
 
 Notable and interesting changes will go in this file whenever a new release goes out. Boring changes will probably go in here too. Really, all changes are welcome.
 
+## 0.2.0
+
+- Fixed an issue where the status indicator/cursor wouldn't be correct when Visual Studio Code opens a window with editors already open.
+- Added an animated GIF to the README! (There will be more of these in the future.)
+
 ## 0.1.1
 
 Fixed the README. I promise to pay more attention next time.
