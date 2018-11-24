@@ -42,9 +42,9 @@ function activeTextEditorChanged(textEditor?: vscode.TextEditor) {
         const mode = getMode(textEditor);
         updateStatusBarItem(mode);
 
-        // if in overtype mode, set the cursor to block style; otherwise, reset to default
+        // if in overtype mode, set the cursor to secondary style; otherwise, reset to default
         textEditor.options.cursorStyle = mode
-            ? vscode.TextEditorCursorStyle.Block
+            ? configuration.secondaryCursorStyle
             : configuration.defaultCursorStyle;
     }
 }
@@ -68,7 +68,6 @@ function onDidChangeConfiguration() {
 
         const textEditor = vscode.window.activeTextEditor;
         const mode = textEditor != null ? getMode(textEditor) : null;
-
         resetModes(mode, configuration.perEditor);
     }
 
@@ -89,7 +88,9 @@ function shouldPerformOvertype() {
 function typeCommand(args: { text: string }) {
     if (shouldPerformOvertype()) {
         const editor = vscode.window.activeTextEditor;
-        overtypeBeforeType(editor, args.text);
+        if (editor) {
+            overtypeBeforeType(editor, args.text);
+        }
     }
 
     return vscode.commands.executeCommand("default:type", args);
@@ -98,7 +99,9 @@ function typeCommand(args: { text: string }) {
 function pasteCommand(args: { text: string, pasteOnNewLine: boolean }) {
     if (configuration.paste && shouldPerformOvertype()) {
         const editor = vscode.window.activeTextEditor;
-        overtypeBeforePaste(editor, args.text, args.pasteOnNewLine);
+        if (editor) {
+            overtypeBeforePaste(editor, args.text, args.pasteOnNewLine);
+        }
     }
 
     return vscode.commands.executeCommand("default:paste", args);

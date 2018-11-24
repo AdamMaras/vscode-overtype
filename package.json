@@ -50,6 +50,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "Sets the insert/overtype mode per editor."
+                },
+                "overtype.secondaryCursorStyle": {
+                    "type": "string",
+                    "default": "block",
+                    "description": "Sets the overtype cursor style."
                 }
             }
         },
