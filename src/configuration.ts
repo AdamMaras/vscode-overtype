@@ -15,8 +15,11 @@ function loadConfiguration() {
         defaultCursorStyle: (() => {
             switch (editorConfiguration.get<string>("cursorStyle")) {
                 case "line": return vscode.TextEditorCursorStyle.Line;
+                case "line-thin": return vscode.TextEditorCursorStyle.LineThin;
                 case "block": return vscode.TextEditorCursorStyle.Block;
+                case "block-outline": return vscode.TextEditorCursorStyle.BlockOutline;
                 case "underline": return vscode.TextEditorCursorStyle.Underline;
+                case "underline-thin": return vscode.TextEditorCursorStyle.UnderlineThin;
                 default: return vscode.TextEditorCursorStyle.Line;
             }
         })(),
