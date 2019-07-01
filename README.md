@@ -1,7 +1,7 @@
 # Overtype for Visual Studio Code
 
 [![Visual Studio Marketplace](http://vsmarketplacebadge.apphb.com/version/adammaras.overtype.svg)](https://marketplace.visualstudio.com/items?itemName=adammaras.overtype)
-[![GitHub release](https://img.shields.io/github/release/AdamMaras/vscode-overtype.svg)](https://github.com/AdamMaras/vscode-overtype/releases)
+[![GitHub release](https://img.shields.io/github/release/AdamMaras/vscode-overtype/all.svg)](https://github.com/AdamMaras/vscode-overtype/releases)
 [![GitHub issues](https://img.shields.io/github/issues/AdamMaras/vscode-overtype.svg)](https://github.com/AdamMaras/vscode-overtype/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/AdamMaras/vscode-overtype.svg)](https://github.com/AdamMaras/vscode-overtype/pulls)
 ![README badges](https://img.shields.io/badge/readme_badges-5-green.svg)
