@@ -1,9 +1,9 @@
 {
     "name": "overtype",
-    "version": "0.2.0",
+    "version": "0.3.1",
     "displayName": "Overtype",
     "description": "Provides insert/overtype mode.",
-    "publisher": "adammaras",
+    "publisher": "DrMerfy",
     "categories": [
         "Other"
     ],
@@ -12,17 +12,17 @@
         "overwrite",
         "insert"
     ],
-    "icon": "images/icon.svg",
+    "icon": "images/icon.png",
     "galleryBanner": {
         "color": "#1e1e1e",
         "theme": "dark"
     },
     "license": "BSD-2-Clause",
-    "homepage": "https://github.com/AdamMaras/vscode-overtype",
-    "bugs": "https://github.com/AdamMaras/vscode-overtype/issues",
+    "homepage": "https://github.com/DrMerfy/vscode-overtype",
+    "bugs": "https://github.com/DrMerfy/vscode-overtype/issues",
     "repository": {
         "type": "git",
-        "url": "https://github.com/AdamMaras/vscode-overtype.git"
+        "url": "https://github.com/DrMerfy/vscode-overtype"
     },
     "main": "./out/extension",
     "engines": {

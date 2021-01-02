@@ -1,12 +1,16 @@
 # Overtype for Visual Studio Code
 
-[![Visual Studio Marketplace](http://vsmarketplacebadge.apphb.com/version/adammaras.overtype.svg)](https://marketplace.visualstudio.com/items?itemName=adammaras.overtype)
-[![GitHub release](https://img.shields.io/github/release/AdamMaras/vscode-overtype/all.svg)](https://github.com/AdamMaras/vscode-overtype/releases)
-[![GitHub issues](https://img.shields.io/github/issues/AdamMaras/vscode-overtype.svg)](https://github.com/AdamMaras/vscode-overtype/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/AdamMaras/vscode-overtype.svg)](https://github.com/AdamMaras/vscode-overtype/pulls)
+[![Open VSX Registry](https://img.shields.io/open-vsx/v/drmerfy/overtype)](https://open-vsx.org/extension/DrMerfy/overtype)
+[![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/version/DrMerfy.overtype.svg)](https://marketplace.visualstudio.com/items?itemName=DrMerfy.overtype)
+[![GitHub release](https://img.shields.io/github/release/DrMerfy/vscode-overtype/all.svg)](https://github.com/DrMerfy/vscode-overtype/releases)
+[![GitHub issues](https://img.shields.io/github/issues/DrMerfy/vscode-overtype.svg)](https://github.com/DrMerfy/vscode-overtype/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/DrMerfy/vscode-overtype.svg)](https://github.com/DrMerfy/vscode-overtype/pulls)
 ![README badges](https://img.shields.io/badge/readme_badges-5-green.svg)
 
 Because some people actually press the Insert key on purpose.
+
+## This is the continuation fork of the project :) 
+## Original author: [Adam Maras](https://github.com/AdamMaras)
 
 ## Features
 
@@ -37,7 +41,7 @@ Fine.
 If you want to enable Hard Mode, you can turn on overtype paste mode. This setting applies overtype behavior to when you paste text into your editor. Here are the rules:
 
 - If you paste part of a line of text into another line of text, the clipboard contents will overwrite characters until it's done pasting, unless it hits the end of the line first, in which case it'll just extend that line.
-  - If you already have some text selected when you paste, that text will *always* be overwritten, even if the contents of the clipboard are smaller.
+- If you already have some text selected when you paste, that text will *always* be overwritten, even if the contents of the clipboard are smaller.
 - If you paste some multiline text into a line of text, everything left on that line will be overwritten with the first line of the pasted text, and the remaining pasted lines will be inserted below that line.
 - If you cut or copy using Visual Studio Code's feature that grabs the entire line when you don't have anything selected, pasting that line will overwrite the *entire* line that you're pasting on.
 
@@ -45,7 +49,7 @@ Some additional tips for using overtype paste:
 
 - Don't forget your Undo shortcut(s).
 - I know this doesn't work like [insert editor here]. Every single freaking editor handles overtype paste differently. It's not my fault.
-- If you think you have a saner way to handle this, for the love of everything warm and cuddly, [MAKE A PULL REQUEST](https://github.com/AdamMaras/vscode-overtype/pulls).
+- If you think you have a saner way to handle this, for the love of everything warm and cuddly, [MAKE A PULL REQUEST](https://github.com/DrMerfy/vscode-overtype/pulls).
 
 Without further ado...
 
@@ -65,18 +69,37 @@ Horizontal screen space at a premium? Have too many things in your status bar al
 
 > Shows an abbreviated overtype status (`INS`/`OVR`) in the status line.
 
+### Overtype cursor style
+
+You can change the overtype cursor style from the preferences.
+Set the `overtype.secondaryCursorStyle` to either one of:
+
+- line
+- line-thin
+- block
+- block-outline
+- underline
+- underline-thin
+
+e.g.
+
+```json
+"overtype.secondaryCursorStyle": "underline"
+```
+
+> Sets the overtype cursor style.
+
 ## Contributing
 
 How can you contribute?
 
-- [**Open an issue**](https://github.com/AdamMaras/vscode-overtype/issues) if you found a problem.
-- [**Make a pull request**](https://github.com/AdamMaras/vscode-overtype/pulls) if you fixed a problem!
-- [**Complain on Twitter**](https://twitter.com/AdamMaras) if *I'm* the problem.
+- [**Open an issue**](https://github.com/DrMerfy/vscode-overtype/issues) if you found a problem.
+- [**Make a pull request**](https://github.com/DrMerfy/vscode-overtype/pulls) if you fixed a problem!
 
 ## Release notes
 
-There's a [`CHANGELOG.md`](https://github.com/AdamMaras/vscode-overtype/blob/master/CHANGELOG.md) file.
+There's a [`CHANGELOG.md`](https://github.com/DrMerfy/vscode-overtype/blob/master/CHANGELOG.md) file.
 
 ## License
 
-There's a [`LICENSE`](https://github.com/AdamMaras/vscode-overtype/blob/master/LICENSE) file. It's the [BSD 2-Clause](https://opensource.org/licenses/BSD-2-Clause) license.
+There's a [`LICENSE`](https://github.com/DrMerfy/vscode-overtype/blob/master/LICENSE) file. It's the [BSD 2-Clause](https://opensource.org/licenses/BSD-2-Clause) license.
