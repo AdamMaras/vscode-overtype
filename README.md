@@ -59,7 +59,7 @@ Without further ado...
 
 > When in overtype mode, uses overtype behavior when pasting text.
 
-### Abbreviated indicators
+### Abbreviated indicators (or none)
 
 Horizontal screen space at a premium? Have too many things in your status bar already? Turned your monitor sideways because somebody told you it would increase your productivity by at least 23%? Don't worry, we've got just the setting for you!
 
@@ -67,7 +67,13 @@ Horizontal screen space at a premium? Have too many things in your status bar al
 "overtype.abbreviatedStatus": true
 ```
 
-> Shows an abbreviated overtype status (`INS`/`OVR`) in the status line.
+> Shows an abbreviated overtype status (`INS`/`OVR`) in the status bar.
+
+```json
+"overtype.showInStatusBar": false
+```
+
+> Disable showing the overtype status in the status bar.
 
 ### Overtype cursor style
 

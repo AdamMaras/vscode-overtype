@@ -61,19 +61,29 @@ function toggleCommand() {
 
 function onDidChangeConfiguration() {
     const previousPerEditor = configuration.perEditor;
+    const previousShowInStatusBar = configuration.showInStatusBar;
+
     const updated = reloadConfiguration();
+    if (!updated) { return; }
+
+    // post create / destroy when changed
+    if (configuration.showInStatusBar !== previousShowInStatusBar) {
+        if (configuration.showInStatusBar) {
+            createStatusBarItem();
+        } else {
+            destroyStatusBarItem();
+        }
+    }
 
     // update state if the per-editor/global configuration option changes
-    if (updated && configuration.perEditor !== previousPerEditor) {
+    if (configuration.perEditor !== previousPerEditor) {
 
         const textEditor = vscode.window.activeTextEditor;
         const mode = textEditor != null ? getMode(textEditor) : null;
         resetModes(mode, configuration.perEditor);
     }
 
-    if (updated) {
-        activeTextEditorChanged();
-    }
+    activeTextEditorChanged();
 }
 
 function shouldPerformOvertype() {

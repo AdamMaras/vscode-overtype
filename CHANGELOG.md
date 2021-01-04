@@ -2,6 +2,11 @@
 
 Notable and interesting changes will go in this file whenever a new release goes out. Boring changes will probably go in here too. Really, all changes are welcome.
 
+## TO BE ANNOUNCED
+
+- New configuration `overtype.showInStatusBar`, to allow hiding the current state in the status bar [#4](https://github.com/DrMerfy/vscode-overtype/issues/4).
+- The item in the status bar can now be clicked to toggle the insert mode [#3](https://github.com/DrMerfy/vscode-overtype/issues/3).
+
 ## 0.3.1
 
 - open-vsx ready, now also found at https://open-vsx.org/extension/DrMerfy/overtype
