@@ -8,6 +8,7 @@ export function createStatusBarItem() {
     if (statusBarItem != null) { return statusBarItem; }
 
     statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right);
+    statusBarItem.command = "overtype.toggle";
     statusBarItem.show();
 
     updateStatusBarItem(null);

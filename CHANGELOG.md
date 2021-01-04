@@ -5,6 +5,7 @@ Notable and interesting changes will go in this file whenever a new release goes
 ## TO BE ANNOUNCED
 
 - New configuration `overtype.showInStatusBar`, to allow hiding the current state in the status bar [#4](https://github.com/DrMerfy/vscode-overtype/issues/4).
+- The item in the status bar can now be clicked to toggle the insert mode [#3](https://github.com/DrMerfy/vscode-overtype/issues/3).
 
 ## 0.3.1
 
