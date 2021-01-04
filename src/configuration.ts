@@ -20,6 +20,7 @@ function loadConfiguration() {
 
     return {
         abbreviatedStatus: overtypeConfiguration.get<boolean>("abbreviatedStatus"),
+        showInStatusBar: overtypeConfiguration.get<boolean>("showInStatusBar"),
         paste: overtypeConfiguration.get<boolean>("paste"),
         perEditor: overtypeConfiguration.get<boolean>("perEditor") ? true : false,
 
@@ -41,7 +42,8 @@ export function reloadConfiguration() {
     const newConfiguration = loadConfiguration();
 
     // bail out if nothing changed
-    if (configuration.abbreviatedStatus === newConfiguration.abbreviatedStatus &&
+    if (configuration.showInStatusBar === newConfiguration.showInStatusBar &&
+        configuration.abbreviatedStatus === newConfiguration.abbreviatedStatus &&
         configuration.paste === newConfiguration.paste &&
         configuration.perEditor === newConfiguration.perEditor &&
         configuration.defaultCursorStyle === newConfiguration.defaultCursorStyle &&
@@ -49,6 +51,7 @@ export function reloadConfiguration() {
         return false;
     }
 
+    configuration.showInStatusBar = newConfiguration.showInStatusBar;
     configuration.abbreviatedStatus = newConfiguration.abbreviatedStatus;
     configuration.paste = newConfiguration.paste;
     configuration.perEditor = newConfiguration.perEditor;

@@ -39,7 +39,7 @@
                 "overtype.abbreviatedStatus": {
                     "type": "boolean",
                     "default": false,
-                    "description": "Shows an abbreviated overtype status (INS/OVR) in the status line."
+                    "description": "Shows an abbreviated overtype status (INS/OVR) in the status bar."
                 },
                 "overtype.paste": {
                     "type": "boolean",
@@ -55,6 +55,11 @@
                     "type": "string",
                     "default": "block",
                     "description": "Sets the overtype cursor style."
+                },
+                "overtype.showInStatusBar": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Shows the current overtype mode in the status bar."
                 }
             }
         },
