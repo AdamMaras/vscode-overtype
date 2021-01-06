@@ -1,4 +1,7 @@
 # Overtype for Visual Studio Code
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Open VSX Registry](https://img.shields.io/open-vsx/v/drmerfy/overtype)](https://open-vsx.org/extension/DrMerfy/overtype)
 [![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/version/DrMerfy.overtype.svg)](https://marketplace.visualstudio.com/items?itemName=DrMerfy.overtype)
@@ -109,3 +112,23 @@ There's a [`CHANGELOG.md`](https://github.com/DrMerfy/vscode-overtype/blob/maste
 ## License
 
 There's a [`LICENSE`](https://github.com/DrMerfy/vscode-overtype/blob/master/LICENSE) file. It's the [BSD 2-Clause](https://opensource.org/licenses/BSD-2-Clause) license.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/GitMensch"><img src="https://avatars3.githubusercontent.com/u/6699539?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Simon Sobisch</b></sub></a><br /><a href="#projectManagement-GitMensch" title="Project Management">📆</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
